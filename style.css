@@ -5,7 +5,6 @@ body {
     padding: 20px;
 }
 
-
 header {
     display: flex;
     justify-content: space-between;
@@ -15,7 +14,7 @@ header {
     height: 80px;                  
     width: 95%; 
     border-radius: 15px;
-    box-shadow: 0 0.5px 10px #2c2b2b
+    background-color: rgba(129, 129, 129, 20%);
 }
 
 .nav-links {
@@ -36,12 +35,26 @@ header {
     gap: 20px;
 }
 
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(270deg, #0a0a0a, #505050, #979797, #505050, #979797, #505050, #0a0a0a);
+    background-size: 1200% 1200%;
+    animation: moveGradient 40s ease infinite;
+}
+
+@keyframes moveGradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
 .div1, .div4{
     grid-column: 1 / 3;
 }
 
-.div1 {
-    margin-top: 10%;
+.div1 , .div2, .div3, .div4 {
+
     backdrop-filter: blur(10%);
     background: rgba(255, 255, 255, 0.3);
     background-color: #f4f4f4;
@@ -50,22 +63,6 @@ header {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.div2 {
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.div3 {
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.div4 {
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.div1 {
+    margin-top: 10%;
 }
