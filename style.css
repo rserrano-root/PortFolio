@@ -65,10 +65,17 @@ body {
 
 .div1 {
     margin-top: 10%;
+    display: flex
+    margin-left: auto;
 }
 
 a:hover {
     color: #000000;
     transform: scale(1.2);
     transition: all 0.3s ease;
+}
+
+image {
+    display: flex;dz
+
 }
