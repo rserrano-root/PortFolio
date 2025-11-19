@@ -29,6 +29,18 @@ header {
     font-weight: bold;
 }
 
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(32, 32, 32);
+}
+
+a:hover {
+    color: #091630;
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+}
+
 #container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -44,7 +56,7 @@ body {
 }
 
 @keyframes moveGradient {
-    0% {background-position: 0% 50%;}
+    10% {background-position: 0% 50%;}
     50% {background-position: 100% 50%;}
     100% {background-position: 0% 50%;}
 }
@@ -64,18 +76,146 @@ body {
 }
 
 .div1 {
-    margin-top: 10%;
-    display: flex
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: column;
+    margin: 5% 10% 0 10% ;
+}
+
+.div1 img {
     margin-left: auto;
 }
 
-a:hover {
-    color: #000000;
-    transform: scale(1.2);
+.div2 {
+    margin: 5% 0 0 20%;
+}
+.div3 {
+    margin: 5% 20% 0 0;
+}
+
+.div4 {
+    margin: 2.5% 10% 5% 10% ;
+    justify-content: center;
+    background-color: rgba(131, 131, 131, 0.4);
+}
+.div4 h2 {
+    text-align: center;
+    color: #091630;
+}
+
+
+/* Mise en forme des titres et paragraphes */
+
+h2 {
+    color: #333333;
+    font-size: 40px;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+h3 {
+    color: #444444;
+    font-size: 25px;
+    margin-top: 15px;
+    padding-left: 40px;
+}
+
+ul {
+    color: #181818;
+    font-size: 20px;
+    line-height: 1.7;
+    padding-left: 80px;
+}
+p {
+    color: #181818;
+    font-size: 20px;
+    line-height: 1.7;
+    padding-left: 50px;
+}
+
+.div2 ul {
+    list-style: none;
+    padding-left: 80px;
+    display: flex;
+    position: center;
+    flex-wrap: wrap;
+
+}
+
+.div2 li {
+    display: inline-block;
+    background: #bebebe;
+    padding: 10px 18px;
+    margin: 8px;
+    border-radius: 12px;
+    font-size: 1.1em;
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    cursor: pointer;
+      
+}
+
+.div2 li:hover {
+    background: #091630;
+    color: white;
+    transform: scale(1.15);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+.social-container {
+    gap: 12px;   
+    display: flex;
+    justify-content: center;              
+}
+
+.social-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f0f0f0;
+    padding: 12px 18px;
+    border-radius: 14px;
+    font-size: 1.2em;
+    font-weight: 600;
+    width: fit-content;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     transition: all 0.3s ease;
 }
 
-image {
-    display: flex;dz
-
+/* LinkedIn */
+.social-box.linkedin:hover {
+    background: #0A66C2;
+    color: white;
 }
+
+/* GitHub */
+.social-box.github:hover {
+    background: #24292F;
+    color: white;
+}
+
+/* Instagram */
+.social-box.instagram:hover {
+    background: #E1306C;
+    color: white;
+}
+
+.social-box img.rootme-icon {
+    width: 24px;       /* même taille qu’une icône Font Awesome */
+    height: 24px;      /* carré propre */
+    object-fit: contain;
+}
+
+.social-box.rootme:hover {
+    background: #350303;   /* un violet cyber (modifiable) */
+    color: white;
+}
+
+.social-box i {
+    font-size: 1.4em;
+}
+
