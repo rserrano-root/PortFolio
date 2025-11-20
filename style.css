@@ -31,6 +31,14 @@ header {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+.name h1 {
+    font-size: 28px;
+    margin: 0;
+    font-weight: 700;
+    color: #122c3d;
+    letter-spacing: 1px;
+}
+
 /*LOGO*/
 
 .logo {
