@@ -250,7 +250,7 @@ p {
     background: #E1306C;
     color: white;
 }
-
+/* Root-Me */
 .social-box img.rootme-icon {
     width: 24px;       
     height: 24px;      
@@ -262,8 +262,19 @@ p {
     color: white;
 }
 
+/* Email */
+.social-box.email:hover {
+    background: #ac2114;
+    color: white;
+}
 .social-box i {
     font-size: 1.4em;
+}
+
+/* Phone */
+.social-box.phone:hover {
+    background: #10351a;
+    color: white;
 }
 
 footer {
