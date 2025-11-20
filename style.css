@@ -1,44 +1,100 @@
-body {
-    background-color: #cccccc;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
+html {
+    scroll-behavior: smooth;
 }
 
+/* === HEADER === */
+
 header {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;            
-    padding: 0 2.5%;
-    background-color: #166c81;
-    height: 80px;                  
-    width: 95%; 
-    border-radius: 15px;
-    background-color: rgba(129, 129, 129, 20%);
+    justify-content: center;
+
+    position: fixed;      /* Le header reste collé en haut */
+    top: 0;
+    left: 0;
+    z-index: 1000;        /* Passe devant tous les éléments */
+
+    background: transparent; /* Laisse la div .header gérer le fond */
 }
+
+
+.header {
+    width: 95%;
+    height: 80px;
+    padding: 0 2.5%;
+    border-radius: 15px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between; /* Logo à gauche, menu à droite */
+    align-items: center;
+
+    background: rgba(187, 187, 187, 0.2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* === LOGO === */
+
+.logo {
+    height: 120px;
+    width: auto;
+    object-fit: contain;
+    margin-top: 10px;
+}
+
+/* === NAVIGATION === */
 
 .nav-links {
     display: flex;
     gap: 25px;
-    align-items: center;
+    list-style: none;
+}
+
+.nav-links li {
+    list-style: none;
 }
 
 .nav-links a {
-    color: white;
     text-decoration: none;
-    font-weight: bold;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: 0.3s ease;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: rgb(32, 32, 32);
-}
-
-a:hover {
+.nav-links a:hover {
     color: #091630;
-    transform: scale(1.2);
-    transition: all 0.3s ease;
+    transform: scale(1.15);
+}
+
+/* === RESPONSIVE MOBILE === */
+
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+    }
+
+    .logo {
+        height: 50px;
+    }
+}
+
+@media (max-width: 550px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        gap: 12px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 #container {
@@ -53,6 +109,9 @@ body {
     background: linear-gradient(270deg, #0a0a0a, #505050, #979797, #505050, #979797, #505050, #0a0a0a);
     background-size: 1200% 1200%;
     animation: moveGradient 40s ease infinite;
+    margin: 100px 0 0 0;
+    padding-bottom: 70px;
+    width : 100%
 }
 
 @keyframes moveGradient {
@@ -77,6 +136,7 @@ body {
 
 .div1 {
     display: flex;
+    align-items: center;
     flex-direction: row;
     gap: 20px;
     justify-content: column;
@@ -98,6 +158,7 @@ body {
     margin: 2.5% 10% 5% 10% ;
     justify-content: center;
     background-color: rgba(131, 131, 131, 0.4);
+    
 }
 .div4 h2 {
     text-align: center;
@@ -154,7 +215,7 @@ p {
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     transition: all 0.3s ease;
     cursor: pointer;
-      
+    
 }
 
 .div2 li:hover {
@@ -205,13 +266,13 @@ p {
 }
 
 .social-box img.rootme-icon {
-    width: 24px;       /* même taille qu’une icône Font Awesome */
-    height: 24px;      /* carré propre */
+    width: 24px;       
+    height: 24px;      
     object-fit: contain;
 }
 
 .social-box.rootme:hover {
-    background: #350303;   /* un violet cyber (modifiable) */
+    background: #350303;
     color: white;
 }
 
@@ -219,3 +280,14 @@ p {
     font-size: 1.4em;
 }
 
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: rgba(187, 187, 187, 0.2);
+    backdrop-filter: blur(20px);
+    color: #000000;
+    font-size: 1rem;
+    position: relative;
+    width: 205%;
+    margin-top: auto;
+}
