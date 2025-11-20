@@ -9,12 +9,12 @@ header {
     display: flex;
     justify-content: center;
 
-    position: fixed;      /* Le header reste collé en haut */
+    position: fixed;      
     top: 0;
     left: 0;
-    z-index: 1000;        /* Passe devant tous les éléments */
+    z-index: 1000;    
 
-    background: transparent; /* Laisse la div .header gérer le fond */
+    background: transparent;
 }
 
 
@@ -25,7 +25,7 @@ header {
     border-radius: 15px;
     margin-top: 10px;
     display: flex;
-    justify-content: space-between; /* Logo à gauche, menu à droite */
+    justify-content: space-between;
     align-items: center;
 
     background: rgba(187, 187, 187, 0.2);
@@ -166,7 +166,7 @@ body {
 }
 
 
-/* Mise en forme des titres et paragraphes */
+/* === Mise en forme des titres et paragraphes === */
 
 h2 {
     color: #333333;
